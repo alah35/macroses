@@ -1,6 +1,6 @@
 #include <iostream>
 
-#define MAX(a, b) a ## _ ## b 
+#define DAY_WEEK(a) WEEK ## _ ## a
 #define WEEK_0 "Monday"
 #define WEEK_1 "Thuesday"
 #define WEEK_2 "Wednesday"
@@ -13,6 +13,31 @@ int main() {
     int a;
     std::cout << "Enter a number of the day of the week: ";
     std::cin >> a;
-    std::cout << MAX("WEEK", a) << std::endl;
+    switch (a) {
+        case 0:
+            std::cout << DAY_WEEK(0) << std::endl;
+            break;
+        case 1:
+            std::cout << DAY_WEEK(1) << std::endl;
+            break;
+        case 2:
+            std::cout << DAY_WEEK(2) << std::endl;
+            break;
+        case 3:
+            std::cout << DAY_WEEK(3) << std::endl;
+            break;
+        case 4:
+            std::cout << DAY_WEEK(4) << std::endl;
+            break;
+        case 5:
+            std::cout << DAY_WEEK(5) << std::endl;
+            break;
+        case 6:
+            std::cout << DAY_WEEK(6) << std::endl;
+            break;
+        default:
+            std::cout << "Wrong number" << std::endl;
+            break;
+            }
     return 0;
 }
